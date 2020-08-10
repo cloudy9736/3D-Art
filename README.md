@@ -10,13 +10,15 @@ Jintao Jiang
 
 ### 待完善
 
+大危机：https://sketchfab.com/3d-models/great-wall-survey-eb94be2c56a14f009e6f0f2533c996d7
+
+rect light + transparent?
+
 试试空加载模型，在不调用的情况下是否需要加载，若可以可以进行LOD
 
 需要完成加载时才允许调用orbit control
 
 迭代一下这个：https://artsexperiments.withgoogle.com/bagan/
-
-preload：https://www.youtube.com/watch?v=epRI930heds
 
 ### Structure
 
