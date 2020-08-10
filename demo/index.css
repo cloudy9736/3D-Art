@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+}
+
+img{
+    width:25%;
+    border-radius: 4px;
+    margin: 3%;
+}
+
+    img:hover {
+        
+    }
+
+gallery{
+    margin: 0;
+}
