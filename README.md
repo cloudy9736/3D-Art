@@ -10,7 +10,7 @@ Jintao Jiang
 
 ### 待完善
 
-大危机：https://sketchfab.com/3d-models/great-wall-survey-eb94be2c56a14f009e6f0f2533c996d7
+Deep Models for 3D Reconstruction: https://www.youtube.com/watch?v=Rfb1J3fJMYA
 
 rect light + transparent?
 
