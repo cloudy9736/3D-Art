@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -17,7 +17,7 @@
     <script type="module">
         import * as THREE from '../js/build/three.module.js';
         import { OrbitControls } from '../js/examples/jsm/controls/OrbitControls.js';
-        const sceneFilePath = '../json/blackHeart.json';
+        const sceneFilePath = '../json/clock.json';
 
         function main() {
             const canvas = document.querySelector('#c');
@@ -34,27 +34,28 @@
             const near = 0.1;
             const far = 10000;
             var camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-            camera.position.set(3, 1, 4);
+            camera.position.set(2, 0, 6);
 
 
             //controls
             var controls = new OrbitControls(camera, canvas);
-            controls.target.set(0, 1.2, 0);
 
             controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
             controls.dampingFactor = 0.05;
 
-            controls.screenSpacePanning = true;
+            controls.screenSpacePanning = false;
 
             controls.minDistance = 2;
-            controls.maxDistance = 8;
+            controls.maxDistance = 5;
 
             //controls.minPolarAngle = Math.PI / 2;
-            controls.maxPolarAngle = Math.PI / 2;
+            //controls.maxPolarAngle = Math.PI / 2;
             //controls.minAzimuthAngle = - Math.PI / 2;
             //controls.maxAzimuthAngle = Math.PI / 2;
-            controls.enabled = false; 
 
+            controls.target.set(0, 0, 1.2);
+            controls.enabled = false; 
+            
             // Set loading screen.
             const animateBar = (percentComplete) => {
                 progressBar.style.width = percentComplete + '%';
@@ -101,16 +102,11 @@
                 progressBar.style.backgroundColor = 'red';
             }
 
-
             //scene setting
             const scene = new THREE.Scene();
 
-            var backColor = 0x716059;
-            scene.background = new THREE.Color(backColor);
-            scene.fog = new THREE.Fog(backColor, 0, 20);
-
-            var amb = new THREE.AmbientLight('white', 1);
-            scene.add(amb);
+            scene.background = new THREE.Color(0x2EBE63);
+            //scene.fog = new THREE.Fog(0xFFFFFF, 0, 100);
 
             // Load object.
             var loader = new THREE.ObjectLoader(manager);
